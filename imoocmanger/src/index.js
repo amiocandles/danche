@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Life from './pages/demo/Life.js';
+//import Life from './pages/demo/Life.js';
 import Admin from './admin.js'
 import * as serviceWorker from './serviceWorker';
 
