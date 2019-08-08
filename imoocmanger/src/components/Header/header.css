@@ -19,3 +19,6 @@ a{
 .weather{
     text-align: right;
 }
+.data{
+    margin-right: 10px;
+}
