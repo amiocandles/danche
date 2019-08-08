@@ -1,6 +1,6 @@
 import React from 'react'
 //antDesign组件
-import { Menu,Icon } from 'antd';
+import { Menu } from 'antd';
 import MenuConfig from './../../config/menuConfig.js'
 import './left.less'
 const { SubMenu } = Menu;
@@ -31,11 +31,11 @@ export default class NavLeft extends React.Component{
         return (<div>
             <div className="logo">
                 <img  src="/assets/logo.png" alt=""/>
-                <h2 >Imooc MS</h2>
             </div>
             <Menu theme="dark">
                 {this.state.menuTreeNode}
             </Menu>
+
         </div>);
     }
 }

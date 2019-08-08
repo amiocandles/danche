@@ -1,5 +1,9 @@
 const menuList = [
     {
+        title:'用户头像',
+        key:'/admin/upload'
+    },
+    {
         title:'首页',
         key:'/admin/home'
     },
@@ -120,6 +124,14 @@ const menuList = [
     {
         title:'权限设置',
         key:'/admin/permission'
+    },
+    {
+        title:'注意事项',
+        key:'/admin/warning'
+    },
+    {
+        title:'日历',
+        key:'/admin/calendar'
     },
 ];
 export default menuList;
