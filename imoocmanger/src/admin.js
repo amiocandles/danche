@@ -3,7 +3,8 @@ import { Row,Col } from 'antd';
 import Header from "./components/Header"
 import Footer from './components/Footer'
 import NavLeft from './components/NavLeft'
-import './style/common.less'
+import './style/commonless.css'
+import Home from './pages/home'
 export default class Admin extends React.Component{
     render(){
         return (
@@ -15,6 +16,7 @@ export default class Admin extends React.Component{
                     <Header/>
                     <Row className="content">
                         {/* <Home/> */}
+                        <Home/>
                         {this.props.children}
                     </Row>
                     <Footer/>
