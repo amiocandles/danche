@@ -6,7 +6,7 @@ export default class Axios {
                 params:'callback'
             },function (err,response) {
                 //to-do
-                if (response.status == 'success') {
+                if (response.status === 'success') {
                     resolve(response);
                 } else {
                     reject(response.messsage);

@@ -3,10 +3,9 @@ import ReactDOM from 'react-dom';
 import './index.css';
 //import Life from './pages/demo/Life.js';
 import Admin from './admin.js'
+import Router from './router.js'
 import * as serviceWorker from './serviceWorker';
-
-ReactDOM.render(<Admin />, document.getElementById('root'));
-
+ReactDOM.render(<Router/>, document.getElementById('root'));
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA

@@ -126,12 +126,12 @@ const menuList = [
         key:'/admin/permission'
     },
     {
-        title:'注意事项',
-        key:'/admin/warning'
-    },
-    {
         title:'日历',
         key:'/admin/calendar'
     },
+    {
+        title:'注意事项',
+        key:'/admin/warning'
+    }
 ];
 export default menuList;
