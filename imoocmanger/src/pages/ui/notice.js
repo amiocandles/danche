@@ -13,7 +13,6 @@ export default class Buttons extends React.Component {
             description:'上个月考勤22天，迟到12天，实发工资250，请笑纳'
         });
     }
-
     render(){
         return (
             <div>
