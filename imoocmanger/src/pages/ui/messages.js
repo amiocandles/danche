@@ -2,7 +2,6 @@ import React from 'react'
 import { Card, Button, message } from 'antd'
 import './ui.css'
 export default class Buttons extends React.Component {
-
     showMessage = (type)=>{
         message[type]("学习使我快乐！！！！！");
     }
