@@ -15,6 +15,7 @@ import Carousel from './pages/ui/carousel'
 import FormLogin from './pages/form/login'
 import FormRegister from './pages/form/register'
 import BasicTable from './pages/table/basicTable'
+import SeniorTable from './pages/table/seniorTable'
 // import {Switch} from "antd";
 export default class IRouter extends React.Component {
     render(){
@@ -36,6 +37,7 @@ export default class IRouter extends React.Component {
                             <Route path="/admin/form/login" component={FormLogin}/>
                             <Route path="/admin/form/reg" component={FormRegister}/>
                             <Route path="/admin/table/basic" component={BasicTable}/>
+                            <Route path="/admin/table/high" component={SeniorTable}/>
                             <Route component={NoMatch}/>
                             </Switch>
                         </Admin>
