@@ -16,6 +16,7 @@ import FormLogin from './pages/form/login'
 import FormRegister from './pages/form/register'
 import BasicTable from './pages/table/basicTable'
 import SeniorTable from './pages/table/seniorTable'
+import City from './pages/city/index'
 // import {Switch} from "antd";
 export default class IRouter extends React.Component {
     render(){
@@ -38,6 +39,7 @@ export default class IRouter extends React.Component {
                             <Route path="/admin/form/reg" component={FormRegister}/>
                             <Route path="/admin/table/basic" component={BasicTable}/>
                             <Route path="/admin/table/high" component={SeniorTable}/>
+                            <Route path="/admin/city" component={City}/>
                             <Route component={NoMatch}/>
                             </Switch>
                         </Admin>
