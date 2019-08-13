@@ -1,3 +1,4 @@
+//主页面结构，通过props.children加载主页面中所有的菜单
 import React from 'react'
 import { Row,Col } from 'antd';
 import Header from "./components/Header"

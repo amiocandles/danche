@@ -1,3 +1,4 @@
+//项目入口，可以嵌套任何组件
 import React, {Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
