@@ -19,6 +19,7 @@ import SeniorTable from './pages/table/seniorTable'
 import City from './pages/city/index'
 import Order from './pages/order/index'
 import Common from "./common";
+import OrderDetail from './pages/order/detail'
 // import {Switch} from "antd";
 export default class IRouter extends React.Component {
     render(){
@@ -49,7 +50,7 @@ export default class IRouter extends React.Component {
                     }/>
                     <Route path="/common" render={() =>
                         <Common>
-                            <Route path="/common/order/detail/:orderId" component={Login} />
+                            <Route path="/common/order/detail/:orderId" component={OrderDetail} />
                         </Common>
                     }
                     />

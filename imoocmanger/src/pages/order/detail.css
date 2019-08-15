@@ -1,0 +1,34 @@
+@import '../../style/commonless.css';
+.detail-items {
+    margin-left: 90px;
+    padding: 25px 50px 25px 0;
+    border-bottom: 1px solid #e5e5e5;
+}
+.detail-items:last-child {
+    border-bottom: none;
+}
+.detail-items .item-title {
+    margin: 20px 0;
+    font-size: #666;
+    color: #bebebe;
+}
+.detail-items .detail-form-left {
+    float: left;
+    width: 164px;
+    text-align: right;
+    color: #999;
+}
+.detail-items .detail-form-content {
+    padding-left: 194px;
+}
+.order-map {
+    height: 450px;
+    margin: 25px -31px 0;
+}
+
+.clearfix{
+margin:20px 0;
+line-height:20px;
+font-size:15px;
+color:#333;
+}
