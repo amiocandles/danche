@@ -18,6 +18,7 @@ import BasicTable from './pages/table/basicTable'
 import SeniorTable from './pages/table/seniorTable'
 import City from './pages/city/index'
 import Order from './pages/order/index'
+import User from './pages/user/index'
 import Common from "./common";
 import OrderDetail from './pages/order/detail'
 // import {Switch} from "antd";
@@ -44,6 +45,7 @@ export default class IRouter extends React.Component {
                             <Route path="/admin/table/high" component={SeniorTable}/>
                             <Route path="/admin/city" component={City}/>
                             <Route path="/admin/order" component={Order}/>
+                            <Route path="/admin/user" component={User}/>
                             <Route component={NoMatch}/>
                             </Switch>
                         </Admin>
