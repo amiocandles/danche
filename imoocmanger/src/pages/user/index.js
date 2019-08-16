@@ -98,6 +98,7 @@ export default class User extends React.Component{
         }
     }
 
+    //创建员工提交
     handleSubmit = ()=>{
         let type = this.state.type;
         let data = this.userForm.props.form.getFieldsValue();
@@ -110,6 +111,7 @@ export default class User extends React.Component{
             }
         }).then((res)=>{
             if(res.code ==0){
+                this.userForm.props.form.resetFields();
                 this.setState({
                     isVisible:false
                 })
@@ -192,12 +194,12 @@ export default class User extends React.Component{
                         </FormItem>
                     </Form>
                 </Card>
-                {/*<Card style={{marginTop:10}}>*/}
-                {/*    <Button type="primary" icon="plus" onClick={()=>this.handleOperator('create')}>创建员工</Button>*/}
-                {/*    <Button icon="edit" onClick={()=>this.handleOperator('edit')}>编辑员工</Button>*/}
-                {/*    <Button onClick={()=>this.handleOperator('detail')}>员工详情</Button>*/}
-                {/*    <Button type="danger" icon="delete" onClick={()=>this.handleOperator('delete')}>删除员工</Button>*/}
-                {/*</Card>*/}
+                <Card style={{marginTop:10}}>
+                    <Button type="primary" icon="plus" onClick={()=>this.handleOperator('create')}>创建员工</Button>
+                    <Button icon="edit" onClick={()=>this.handleOperator('edit')}>编辑员工</Button>
+                    <Button onClick={()=>this.handleOperator('detail')}>员工详情</Button>
+                    <Button type="danger" icon="delete" onClick={()=>this.handleOperator('delete')}>删除员工</Button>
+                </Card>
                 <div className="content-wrap">
                     <ETable
                         columns={columns}
@@ -212,6 +214,7 @@ export default class User extends React.Component{
                     visible={this.state.isVisible}
                     onOk={this.handleSubmit}
                     width={800}
+
                     onCancel={()=>{
                         this.userForm.props.form.resetFields();
                         this.setState({
@@ -239,7 +242,7 @@ class UserForm extends React.Component{
     }
 
     render(){
-        const { getFieldDecorator } = this.props.form;
+        const { getFieldDecorator } = this.props.form;//数据双向绑定
         const formItemLayout = {
             labelCol: {span: 5},
             wrapperCol: {span: 16}
