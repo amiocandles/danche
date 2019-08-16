@@ -75,8 +75,9 @@ export default class User extends React.Component{
                 })
                 return;
             }
-            Utils.ui.confirm({
-                text:'确定要删除此用户吗？',
+            let _this=this;
+            Modal.confirm({
+                title:'确定要删除此用户吗？',
                 onOk:()=>{
                     axios.ajax({
                         url:'/user/delete',
@@ -87,10 +88,10 @@ export default class User extends React.Component{
                         }
                     }).then((res)=>{
                         if(res.code ==0){
-                            this.setState({
+                            _this.setState({
                                 isVisible:false
                             })
-                            this.requestList();
+                            _this.requestList();
                         }
                     })
                 }
@@ -179,6 +180,12 @@ export default class User extends React.Component{
             dataIndex: 'time'
         }
         ];
+        let footer={};
+        if (this.state.type=='detail'){
+            footer={
+                footer:null
+            }
+        }
         return (
             <div>
                 <Card>
@@ -213,8 +220,6 @@ export default class User extends React.Component{
                     title={this.state.title}
                     visible={this.state.isVisible}
                     onOk={this.handleSubmit}
-                    width={800}
-
                     onCancel={()=>{
                         this.userForm.props.form.resetFields();
                         this.setState({
@@ -222,6 +227,8 @@ export default class User extends React.Component{
                             userInfo:''
                         })
                     }}
+                    width={800}
+                    {...footer}
                 >
                     <UserForm userInfo={this.state.userInfo} type={this.state.type} wrappedComponentRef={(inst) => this.userForm = inst }/>
                 </Modal>
