@@ -172,7 +172,7 @@ export default class Order extends React.Component{
                 this.setState({
                     isUserVisible:false
                 })
-                this.requestList();
+                this.requestList();//加载角色请求列表
             }
         })
     }
@@ -279,7 +279,6 @@ export default class Order extends React.Component{
         );
     }
 }
-
 // 角色创建
 class RoleForm extends React.Component{
     render(){
