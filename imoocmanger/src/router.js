@@ -23,6 +23,8 @@ import Common from "./common";
 import OrderDetail from './pages/order/detail'
 import BikeMap from './pages/map/bikeMap'
 import Bar from './pages/echarts/bar/index'
+import Pie from './pages/echarts/pie/index'
+
 // import {Switch} from "antd";
 export default class IRouter extends React.Component {
     render(){
@@ -50,6 +52,7 @@ export default class IRouter extends React.Component {
                             <Route path="/admin/user" component={User}/>
                             <Route path="/admin/bikeMap" component={BikeMap}/>
                             <Route path="/admin/charts/bar" component={Bar}/>
+                            <Route path="/admin/charts/pie" component={Pie}/>
                             <Route component={NoMatch}/>
                             </Switch>
                         </Admin>
