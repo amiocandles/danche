@@ -35,6 +35,7 @@ export default class IRouter extends React.Component {
             <HashRouter>
                 <App>
                     <Switch>
+<<<<<<< HEAD
                     <Route path="/login" component={Login}/>
                     <Route path="/common" render={() =>
                         <Common>
@@ -73,6 +74,46 @@ export default class IRouter extends React.Component {
                         </Admin>
                     }/>
                 </Switch>
+=======
+                        <Route path="/login" component={Login}/>
+                        <Route path="/common" render={() =>
+                            <Common>
+                                <Route path="/common/order/detail/:orderId" component={OrderDetail} />
+                            </Common>
+                        }
+                        />
+                        <Route path="/" render={()=>
+                            <Admin>
+                                <Switch>
+                                    <Route path='/home' component={Home} />
+                                    <Route path="/ui/buttons" component={Buttons}/>
+                                    <Route path="/ui/modals" component={Modals}/>
+                                    <Route path="/ui/loadings" component={Loadings}/>
+                                    <Route path="/ui/notification" component={Notice}/>
+                                    <Route path="/ui/messages" component={Messages}/>
+                                    <Route path="/ui/tabs" component={Tabs}/>
+                                    <Route path="/ui/gallery" component={Gallery}/>
+                                    <Route path="/ui/carousel" component={Carousel}/>
+                                    <Route path="/form/login" component={FormLogin}/>
+                                    <Route path="/form/reg" component={FormRegister}/>
+                                    <Route path="/table/basic" component={BasicTable}/>
+                                    <Route path="/table/high" component={SeniorTable}/>
+                                    <Route path="/city" component={City}/>
+                                    <Route path="/order" component={Order}/>
+                                    <Route path="/user" component={User}/>
+                                    <Route path="/bikeMap" component={BikeMap}/>
+                                    <Route path="/charts/bar" component={Bar}/>
+                                    <Route path="/charts/pie" component={Pie}/>
+                                    <Route path="/charts/line" component={Line}/>
+                                    <Route path="/rich" component={Rich}/>
+                                    <Route path="/permission" component={Permission}/>
+                                    <Route component={NoMatch}/>
+                                    <Redirect to="/home" />
+                                </Switch>
+                            </Admin>
+                        }/>
+                    </Switch>
+>>>>>>> redux
                 </App>
             </HashRouter>
         )
